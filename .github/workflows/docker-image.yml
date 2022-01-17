@@ -50,4 +50,4 @@ jobs:
           push: false
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: POSTGIS_VERSION=${{ env.PGIS_VERSION }}, PG_VERSION_TAG=${{ matrix.pg }}
+          build-args: POSTGIS_VERSION=${{ env.PGIS_VERSION }},PG_VERSION_TAG=${{ matrix.pg }},TS_VERSION=${{ env.TS_VERSION }}
