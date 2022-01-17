@@ -11,7 +11,7 @@ env:
   TS_VERSION: ${{ github.event.inputs.version || '2.5.0' }}
   PGIS_VERSION: 2.5.5
   REGISTRY: ghcr.io
-  IMAGE_NAME: innofreight/timescaledb-postgis-${{ env.TS_VERSION }}
+  IMAGE_NAME: innofreight/timescaledb-postgis-${{ TS_VERSION }}
 jobs:
 
   # Builds image, which extends TimescaleDB image with PostGIS. Thus it depends on the job timescaledb.
