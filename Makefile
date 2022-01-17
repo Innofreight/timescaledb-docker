@@ -1,7 +1,7 @@
-NAME=timescaledb
+NAME=timescaledb-docker
 # Default is to timescaledev to avoid unexpected push to the main repo
 # Set ORG to timescale in the caller
-ORG=timescaledev
+ORG=ghcr.io/innofreight
 PG_VER=pg12
 PG_VER_NUMBER=$(shell echo $(PG_VER) | cut -c3-)
 TS_VERSION=master
