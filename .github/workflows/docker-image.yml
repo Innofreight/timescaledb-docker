@@ -4,12 +4,15 @@ on:
     branches: [ release_docker, dev-build ]
   workflow_dispatch:
     inputs:
-      version:
-        description: 'Version to release'
+      ts_version:
+        description: 'Timescale version to release'
         required: true
+      pgis_version:
+        description: 'Postgis version to release'
+        required: false
 env:
-  TS_VERSION: ${{ github.event.inputs.version || '2.5.0' }}
-  PGIS_VERSION: 2.5.5
+  TS_VERSION: ${{ github.event.inputs.ts_version || '2.5.0' }}
+  PGIS_VERSION: ${{ github.event.inputs.pgis_version || '2.5.5' }}
   REGISTRY: ghcr.io
   IMAGE_NAME: innofreight/timescaledb-postgis-${{ github.event.inputs.version || '2.5.0' }}
 jobs:

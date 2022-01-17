@@ -1,6 +1,6 @@
 ARG TS_VERSION
 ARG PG_VERSION_TAG
-FROM timescale/timescaledb:${TS_VERSION}-${PG_VERSION_TAG}
+FROM timescale/timescaledb:${TS_VERSION}-pg${PG_VERSION_TAG}
 
 LABEL maintainer="Timescale https://www.timescale.com"
 ARG POSTGIS_VERSION
